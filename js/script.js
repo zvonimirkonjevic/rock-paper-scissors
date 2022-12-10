@@ -28,9 +28,12 @@ function playRound(playerSelection, computerSelection){
 function game(){
     for(let i=0; i<5; i++){
         let playerSelection = prompt("Enter your choice: ");
-        playRound(playerSelection,getComputerChoice());
+        console.log(playRound(playerSelection,getComputerChoice()));
     }
-    if(playerScore > computerScore){
+    if(playerScore === computerScore){
+        console.log("It's a tie!");
+    }
+    else if(playerScore > computerScore){
         console.log("You win!");
     }
     else{
