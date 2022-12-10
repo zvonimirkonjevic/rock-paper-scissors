@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection){
     }
     else{
         computerScore++;
-        reutrn `You lose! ${computerSelection.charAt(0).toUpperCase()+ computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase()+ playerSelection.slice(1)}.`;
+        return `You lose! ${computerSelection.charAt(0).toUpperCase()+ computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase()+ playerSelection.slice(1)}.`;
     }
 }
 
