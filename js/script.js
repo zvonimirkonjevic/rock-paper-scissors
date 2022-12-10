@@ -16,9 +16,11 @@ function playRound(playerSelection, computerSelection){
         return `It's a tie!`;
     }
     else if((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')){
+        playerScore++;
         return `You win! ${playerSelection.charAt(0).toUpperCase()+ playerSelection.slice(1)} beats ${computerSelection.charAt(0).toUpperCase()+ computerSelection.slice(1)}.`;
     }
     else{
+        computerScore++;
         reutrn `You lose! ${computerSelection.charAt(0).toUpperCase()+ computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase()+ playerSelection.slice(1)}.`;
     }
 }
@@ -26,5 +28,12 @@ function playRound(playerSelection, computerSelection){
 function game(){
     for(let i=0; i<5; i++){
         let playerSelection = prompt("Enter your choice: ");
+        playRound(playerSelection,getComputerChoice());
+    }
+    if(playerScore > computerScore){
+        console.log("You win!");
+    }
+    else{
+        console.log("You lose!");
     }
 }
