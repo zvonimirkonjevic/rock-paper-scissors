@@ -30,3 +30,8 @@ body{
     letter-spacing: -0.08em;
     line-height: 1.3em;
 }
+
+.scoreboard{
+    font-size: 1.5em;
+    margin-top: 20px;
+}
