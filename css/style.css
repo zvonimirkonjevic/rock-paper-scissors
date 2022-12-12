@@ -24,3 +24,9 @@ body{
     font-size: 1.8em;
     margin: 20px 0 40px;
 }
+
+.option{
+    font-size: 8.0em;
+    letter-spacing: -0.08em;
+    line-height: 1.3em;
+}
