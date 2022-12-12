@@ -6,7 +6,6 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     font-family: "GorditaBold";
@@ -14,10 +13,17 @@ body{
 }
 
 .container{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 2;
     align-items: center;
+    text-align: center;
+}
+
+.container:first-of-type{
+    border-right: 1px solid lightgray;
 }
 
 .title{
