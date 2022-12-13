@@ -3,7 +3,7 @@ const AVAILABLECHOICES = ['Rock', 'Paper', 'Scissors'];
 const humanScoreCard = document.querySelector('#h-score');
 const computerScoreCard = document.querySelector('#c-score');
 
-let playerScore = 0;
+let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice(){
@@ -16,14 +16,16 @@ function playRound(playerSelection, computerSelection){
     computerSelection = computerSelection.toLowerCase();
 
     if(playerSelection === computerSelection){
-        return `It's a tie!`;
+        humanScore++;
+        computerScore++;
+        
     }
     else if((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')){
-        playerScore++;
-        return `You win! ${playerSelection.charAt(0).toUpperCase()+ playerSelection.slice(1)} beats ${computerSelection.charAt(0).toUpperCase()+ computerSelection.slice(1)}.`;
+        humanScore++;
+        
     }
     else{
         computerScore++;
-        return `You lose! ${computerSelection.charAt(0).toUpperCase()+ computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase()+ playerSelection.slice(1)}.`;
+        
     }
 }
