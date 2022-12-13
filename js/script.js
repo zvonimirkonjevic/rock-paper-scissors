@@ -24,19 +24,3 @@ function playRound(playerSelection, computerSelection){
         return `You lose! ${computerSelection.charAt(0).toUpperCase()+ computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase()+ playerSelection.slice(1)}.`;
     }
 }
-
-function game(){
-    for(let i=0; i<5; i++){
-        let playerSelection = prompt("Enter your choice: ");
-        console.log(playRound(playerSelection,getComputerChoice()));
-    }
-    if(playerScore === computerScore){
-        console.log("It's a tie!");
-    }
-    else if(playerScore > computerScore){
-        console.log("You win!");
-    }
-    else{
-        console.log("You lose!");
-    }
-}
