@@ -3,6 +3,9 @@ const AVAILABLECHOICES = ['Rock', 'Paper', 'Scissors'];
 const humanScoreCard = document.querySelector('#h-score');
 const computerScoreCard = document.querySelector('#c-score');
 
+const humanTitle = document.querySelector('#h-title');
+const computerTitle = document.querySelector('#c-title');
+
 let humanScore = 0;
 let computerScore = 0;
 
