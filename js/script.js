@@ -30,6 +30,11 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+function updateScore(){
+    humanScoreCard.textContent = humanScore;
+    computerScoreCard.textContent = computerScore;
+}
+
 const hRock = document.querySelector('#h-rock');
 const hPaper = document.querySelector('#h-paper');
 const hScissors = document.querySelector('#h-scissors');
