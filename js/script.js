@@ -15,9 +15,6 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection){
-    playerSelection = playerSelection.toLowerCase();
-    computerSelection = computerSelection.toLowerCase();
-
     if(playerSelection === computerSelection){
         humanScore++;
         computerScore++;
