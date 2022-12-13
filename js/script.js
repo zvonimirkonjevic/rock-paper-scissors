@@ -1,5 +1,8 @@
 const AVAILABLECHOICES = ['Rock', 'Paper', 'Scissors'];
 
+const humanScoreCard = document.querySelector('#h-score');
+const computerScoreCard = document.querySelector('#c-score');
+
 let playerScore = 0;
 let computerScore = 0;
 
