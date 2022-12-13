@@ -40,3 +40,15 @@ function resetScore(){
         computerScoreCard.textContent = computerScore;
     }
 }
+
+const humanChoice = document.querySelectorAll('.human');
+
+for(let i=0; i<humanChoice.length; i++){
+    humanChoice[i].addEventListener('click', () => {
+        playRound(humanChoice[i].innerHTML, getComputerChoice());
+        updateScore();
+        setTimeout(() => {
+            resetScore();
+        }, 3000);
+    });
+}
