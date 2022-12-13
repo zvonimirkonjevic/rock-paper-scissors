@@ -40,25 +40,3 @@ function resetScore(){
         computerScoreCard.textContent = computerScore;
     }
 }
-
-const hRock = document.querySelector('#h-rock');
-const hPaper = document.querySelector('#h-paper');
-const hScissors = document.querySelector('#h-scissors');
-
-hRock.addEventListener('click', () =>{
-    playRound(hRock.innerHTML, getComputerChoice());
-    updateScore();
-    setTimeout(() => resetScore(), 3000);
-});
-
-hPaper.addEventListener('click', () =>{
-    playRound(hScissors.innerHTML, getComputerChoice());
-    updateScore();
-    setTimeout(() => resetScore(), 3000);
-});
-
-hScissors.addEventListener('click', () =>{
-    playRound(hPaper.innerHTML, getComputerChoice());
-    updateScore();
-    setTimeout(() => resetScore(), 3000);
-});
