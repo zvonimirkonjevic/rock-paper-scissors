@@ -18,14 +18,15 @@ function playRound(playerSelection, computerSelection){
     if(playerSelection === computerSelection){
         humanScore++;
         computerScore++;
-        
     }
     else if((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')){
         humanScore++;
-        
     }
     else{
         computerScore++;
-        
     }
 }
+
+const hRock = document.querySelector('#h-rock');
+const hPaper = document.querySelector('#h-paper');
+const hScissors = document.querySelector('#h-scissors');
