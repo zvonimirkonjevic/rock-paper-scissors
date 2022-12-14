@@ -31,12 +31,16 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function showRoundWinner(roundResult){
+const container = document.querySelectorAll('.container');
+
+function updateWinnerUI(roundResult){
     if(roundResult === 'win'){
         humanTitle.textContent = "Winner!";
+        container[0].style.cssText = "background-color: #121212; color: #fff;";
     }
     else if(roundResult === 'lose'){
         computerTitle.textContent = "Winner!";
+        container[1].style.cssText = "background-color: #121212; color: #fff;";
     }
     else{
         humanTitle.textContent = "Tie!";
@@ -44,9 +48,11 @@ function showRoundWinner(roundResult){
     }
 }
 
-function resetRoundWinner(){
+function resetWinnerUI(){
     humanTitle.textContent = "Human";
     computerTitle.textContent = "Computer";
+    container[0].style.cssText = "background-color: white; color: black;";
+    container[1].style.cssText = "background-color: white; color: black;";
 }
 
 function updateScore(){
@@ -69,9 +75,9 @@ for(let i=0; i<humanChoice.length; i++){
     humanChoice[i].addEventListener('click', () => {
         playRound(humanChoice[i].innerHTML, getComputerChoice());
         updateScore();
-        showRoundWinner(roundResult);
+        updateWinnerUI(roundResult);
         setTimeout(() => {
-            resetRoundWinner();
+            resetWinnerUI();
         }, 700);
         setTimeout(() => {
             resetScore();
