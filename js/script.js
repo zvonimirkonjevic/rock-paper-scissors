@@ -6,6 +6,11 @@ const computerScoreCard = document.querySelector('#c-score');
 const humanTitle = document.querySelector('#h-title');
 const computerTitle = document.querySelector('#c-title');
 
+const humanChoice = document.querySelectorAll('.human');
+const computerChoice = document.querySelectorAll('.computer');
+
+const container = document.querySelectorAll('.container');
+
 let humanScore = 0;
 let computerScore = 0;
 let roundResult = "";
@@ -30,8 +35,6 @@ function playRound(playerSelection, computerSelection){
         roundResult = "lose";
     }
 }
-
-const container = document.querySelectorAll('.container');
 
 function updateWinnerUI(roundResult){
     if(roundResult === 'win'){
@@ -68,8 +71,6 @@ function resetScore(){
         computerScoreCard.textContent = computerScore;
     }
 }
-
-const humanChoice = document.querySelectorAll('.human');
 
 for(let i=0; i<humanChoice.length; i++){
     humanChoice[i].addEventListener('click', () => {
