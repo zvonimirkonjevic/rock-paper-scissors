@@ -16,8 +16,8 @@ function getComputerChoice(){
 
 function playRound(playerSelection, computerSelection){
     if(playerSelection === computerSelection){
-        humanScore++;
-        computerScore++;
+        humanScore += 0;
+        computerScore += 0;
     }
     else if((playerSelection === 'Rock' && computerSelection === 'Scissors') || (playerSelection === 'Paper' && computerSelection === 'Rock') || (playerSelection === 'Scissors' && computerSelection === 'Paper')){
         humanScore++;
