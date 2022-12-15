@@ -36,7 +36,7 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function updateWinnerUI(roundResult){
+function updateUI(roundResult){
     humanScoreCard.textContent = humanScore;
     computerScoreCard.textContent = computerScore;
     if(roundResult === 'win'){
@@ -53,7 +53,7 @@ function updateWinnerUI(roundResult){
     }
 }
 
-function resetWinnerUI(){
+function resetUI(){
     humanTitle.textContent = "Human";
     computerTitle.textContent = "Computer";
     container[0].style.cssText = "background-color: white; color: black;";
@@ -69,9 +69,9 @@ function resetWinnerUI(){
 for(let i=0; i<humanChoice.length; i++){
     humanChoice[i].addEventListener('click', () => {
         playRound(humanChoice[i].innerHTML, getComputerChoice());
-        updateWinnerUI(roundResult);
+        updateUI(roundResult);
         setTimeout(() => {
-            resetWinnerUI();
+            resetUI();
         }, 700);
     });
 }
