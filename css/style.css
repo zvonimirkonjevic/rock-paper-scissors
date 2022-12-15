@@ -56,3 +56,7 @@ body{
     position: absolute;
     background-color: #ccf119;
 }
+
+.visible{
+    display: flex;
+}
