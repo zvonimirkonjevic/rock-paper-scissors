@@ -53,6 +53,23 @@ function updateUI(roundResult){
     }
 }
 
+function toggleAnnouncement(){
+    const announcement = document.querySelector('.announcement');
+    const announcementText = document.querySelector('.announcement-text');
+    if(humanScore === 5 || computerScore === 5){
+        announcement.classList.add('visible');
+        if(humanScore > computerScore){
+            announcementText.textContent = "You win!";
+        }
+        else{
+            announcementText.textContent = "You lose!";
+        }
+    }
+    setTimeout(() => {
+        announcement.classList.remove('visible');
+    }, 900);
+}
+
 function resetUI(){
     humanTitle.textContent = "Human";
     computerTitle.textContent = "Computer";
