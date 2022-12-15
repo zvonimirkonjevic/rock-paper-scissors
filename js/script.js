@@ -21,6 +21,7 @@ function getComputerChoice(){
 }
 
 function playRound(humanSelection, computerSelection){
+    highlightSelected(humanSelection, computerSelection);
     if(humanSelection === computerSelection){
         humanScore += 0;
         computerScore += 0;
@@ -81,6 +82,45 @@ function toggleAnnouncement(){
     setTimeout(() => {
         announcement.classList.remove('visible');
     }, 900);
+}
+
+function highlightSelected(human, computer){
+    if(human === 'Rock'){
+        humanChoice[0].classList.add('selected');
+        setTimeout(() => {
+            humanChoice[0].classList.remove('selected');
+        }, 700);
+    }
+    if(human === 'Paper'){
+        humanChoice[1].classList.add('selected');
+        setTimeout(() => {
+            humanChoice[1].classList.remove('selected');
+        }, 700);
+    }
+    if(human === 'Scissors'){
+        humanChoice[2].classList.add('selected');
+        setTimeout(() => {
+            humanChoice[2].classList.remove('selected');
+        }, 700);
+    }
+    if(computer === 'Rock'){
+        computerChoice[0].classList.add('selected');
+        setTimeout(() => {
+            computerChoice[0].classList.remove('selected');
+        }, 700);
+    }
+    if(computer === 'Paper'){
+        computerChoice[1].classList.add('selected');
+        setTimeout(() => {
+            computerChoice[1].classList.remove('selected');
+        }, 700);
+    }
+    if(computer === 'Scissors'){
+        computerChoice[2].classList.add('selected');
+        setTimeout(() => {
+            computerChoice[2].classList.remove('selected');
+        }, 700);
+    }
 }
 
 for(let i=0; i<humanChoice.length; i++){
