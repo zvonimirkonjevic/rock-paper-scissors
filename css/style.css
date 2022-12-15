@@ -60,3 +60,9 @@ body{
 .visible{
     display: flex;
 }
+
+.announcement-text{
+    font-size: 8.0em;
+    letter-spacing: -0.08em;
+    line-height: 1.3em;
+}
