@@ -70,6 +70,7 @@ for(let i=0; i<humanChoice.length; i++){
     humanChoice[i].addEventListener('click', () => {
         playRound(humanChoice[i].innerHTML, getComputerChoice());
         updateUI(roundResult);
+        toggleAnnouncement();
         setTimeout(() => {
             resetUI();
         }, 700);
