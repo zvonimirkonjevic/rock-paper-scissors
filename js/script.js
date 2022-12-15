@@ -20,13 +20,13 @@ function getComputerChoice(){
     return AVAILABLECHOICES[index];
 }
 
-function playRound(playerSelection, computerSelection){
-    if(playerSelection === computerSelection){
+function playRound(humanSelection, computerSelection){
+    if(humanSelection === computerSelection){
         humanScore += 0;
         computerScore += 0;
         roundResult = "tie";
     }
-    else if((playerSelection === 'Rock' && computerSelection === 'Scissors') || (playerSelection === 'Paper' && computerSelection === 'Rock') || (playerSelection === 'Scissors' && computerSelection === 'Paper')){
+    else if((humanSelection === 'Rock' && computerSelection === 'Scissors') || (humanSelection === 'Paper' && computerSelection === 'Rock') || (humanSelection === 'Scissors' && computerSelection === 'Paper')){
         humanScore++;
         roundResult = "win";
     }
@@ -53,6 +53,19 @@ function updateUI(roundResult){
     }
 }
 
+function resetUI(){
+    humanTitle.textContent = "Human";
+    computerTitle.textContent = "Computer";
+    container[0].style.cssText = "background-color: white; color: black;";
+    container[1].style.cssText = "background-color: white; color: black;";
+    if(humanScore === 5 || computerScore === 5){
+        humanScore = 0;
+        computerScore = 0;
+        humanScoreCard.textContent = humanScore;
+        computerScoreCard.textContent = computerScore;
+    }
+}
+
 function toggleAnnouncement(){
     const announcement = document.querySelector('.announcement');
     const announcementText = document.querySelector('.announcement-text');
@@ -68,19 +81,6 @@ function toggleAnnouncement(){
     setTimeout(() => {
         announcement.classList.remove('visible');
     }, 900);
-}
-
-function resetUI(){
-    humanTitle.textContent = "Human";
-    computerTitle.textContent = "Computer";
-    container[0].style.cssText = "background-color: white; color: black;";
-    container[1].style.cssText = "background-color: white; color: black;";
-    if(humanScore === 5 || computerScore === 5){
-        humanScore = 0;
-        computerScore = 0;
-        humanScoreCard.textContent = humanScore;
-        computerScoreCard.textContent = computerScore;
-    }
 }
 
 for(let i=0; i<humanChoice.length; i++){
