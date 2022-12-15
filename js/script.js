@@ -37,6 +37,8 @@ function playRound(playerSelection, computerSelection){
 }
 
 function updateWinnerUI(roundResult){
+    humanScoreCard.textContent = humanScore;
+    computerScoreCard.textContent = computerScore;
     if(roundResult === 'win'){
         humanTitle.textContent = "Winner!";
         container[0].style.cssText = "background-color: #121212; color: #fff;";
@@ -56,14 +58,6 @@ function resetWinnerUI(){
     computerTitle.textContent = "Computer";
     container[0].style.cssText = "background-color: white; color: black;";
     container[1].style.cssText = "background-color: white; color: black;";
-}
-
-function updateScore(){
-    humanScoreCard.textContent = humanScore;
-    computerScoreCard.textContent = computerScore;
-}
-
-function resetScore(){
     if(humanScore === 5 || computerScore === 5){
         humanScore = 0;
         computerScore = 0;
@@ -75,13 +69,9 @@ function resetScore(){
 for(let i=0; i<humanChoice.length; i++){
     humanChoice[i].addEventListener('click', () => {
         playRound(humanChoice[i].innerHTML, getComputerChoice());
-        updateScore();
         updateWinnerUI(roundResult);
         setTimeout(() => {
             resetWinnerUI();
         }, 700);
-        setTimeout(() => {
-            resetScore();
-        }, 3000);
     });
 }
