@@ -1,6 +1,7 @@
-@font-face {
-    font-family: "GorditaBold";
-    src: url("/fonts/GorditaBold.otf");
+@font-face 
+{
+    font-family: 'GorditaBold';
+    src: url("/fonts/GorditaBold.otf") format("opentype");
 }
 
 body{
@@ -8,7 +9,7 @@ body{
     padding: 0;
     display: flex;
     justify-content: space-evenly;
-    font-family: "GorditaBold";
+    font-family: 'GorditaBold';
     color: black;
 }
 
