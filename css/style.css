@@ -44,7 +44,7 @@ body{
 }
 
 .human:hover{
-    color: #77A0F2;
+    color: #848484;
     cursor: pointer;
 }
 
@@ -55,7 +55,7 @@ body{
     height: 100vh;
     width: 100vw;
     position: absolute;
-    background-color: #77A0F2;
+    background-color: #848484;
 }
 
 .visible{
@@ -69,5 +69,5 @@ body{
 }
 
 .selected{
-    color: #77A0F2;
+    color: #848484;
 }
