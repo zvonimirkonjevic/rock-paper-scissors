@@ -42,10 +42,12 @@ function updateUI(roundResult){
     computerScoreCard.textContent = computerScore;
     if(roundResult === 'win'){
         humanTitle.textContent = "Winner!";
+        computerTitle.textContent = "Loser!";
         container[0].style.cssText = "background-color: #121212; color: #fff;";
     }
     else if(roundResult === 'lose'){
         computerTitle.textContent = "Winner!";
+        humanTitle.textContent = "Loser!";
         container[1].style.cssText = "background-color: #121212; color: #fff;";
     }
     else{
